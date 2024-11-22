@@ -19,8 +19,9 @@ html,body{
     font-weight: bold;
     color: #0f1975;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 100%;
-    
+    font-size: 200%;
+    z-index: 1000; /* Giá trị cao hơn bản đồ */
+    position: relative; /* Giữ vị trí tương đối để z-index có hiệu lực */
 }
 .cus_content{
     height: 100% !important;
@@ -74,3 +75,56 @@ html,body{
  h2{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  }
+.cus_btn_b{
+  width: 100px;
+}
+.cus_map{
+  height: 100%; 
+  margin: 0 !important;
+  padding: 0 !important; 
+  z-index: 1;
+}
+/* Tùy chỉnh kiểu chữ và màu sắc cho Base Layers */
+.leaflet-control-layers-base label {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #333; /* Màu chữ */
+}
+
+/* Tùy chỉnh kiểu chữ và màu sắc cho Overlays */
+.leaflet-control-layers-overlays label {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #007BFF; /* Màu chữ xanh dương */
+}
+
+/* Tùy chỉnh tiêu đề control panel (nếu có) */
+.leaflet-control-layers-expanded {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Tùy chỉnh tổng thể toàn bộ text */
+.leaflet-control-layers label {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #555;
+  text-align: left;
+}
+.container-sm, .container-fluid {
+  overflow: visible; /* Đảm bảo các thành phần không bị cắt */
+}
+
+.cus_map {
+  height: calc(100vh - 100px); /* Trừ đi chiều cao header nếu cần */
+  overflow: hidden;
+}
+#mymap {
+  height: 100vh; /* Chiều cao toàn màn hình */
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.label_text{
+  text-align: start;
+}
